@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [Spring Boot Project with AWS](README.md)
