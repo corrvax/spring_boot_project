@@ -27,9 +27,6 @@ repositories {
 dependencies {
     //testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    //gradle verson 7.0 이후부터
-    //before  : compile, runtime, testCompile, testRuntime
-    //after : implementation, runtimeOnly, testImplementation, testRuntimeOnly
     implementation('org.springframework.boot:spring-boot-starter-web')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 
