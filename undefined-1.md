@@ -37,4 +37,4 @@ TDD와 달리 테스트 코드를 꼭 먼저 작성해야 하는 것도 아니�
 
 
 
-<table><thead><tr><th>@SpringBootApplication</th><th>SpringApplication.run</th><th data-hidden></th></tr></thead><tbody><tr><td>스프링 부트의 자동 설정, 스프링 Bean읽기와 생성을 모두 자동설정</td><td>내장 WAS를 실행</td><td></td></tr><tr><td>프로젝의 최상단</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>@SpringBootApplication</th><th>SpringApplication.run</th><th data-hidden></th></tr></thead><tbody><tr><td>스프링 부트의 자동 설정, 스프링 Bean읽기와 생성을 모두 자동설정</td><td>내장 WAS를 실행->톰캣 설치할 필요 없이 Jar파일(실행가능한 java 패키징파일)로 실행하면됨</td><td></td></tr><tr><td>프로젝의 최상단</td><td></td><td></td></tr></tbody></table>
