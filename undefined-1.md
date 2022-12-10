@@ -34,7 +34,3 @@ TDD와 달리 테스트 코드를 꼭 먼저 작성해야 하는 것도 아니�
 3. 개발자가 만든 기능을 안전하게 보호합니다.(테스트 코드는 하나의 기능을 추가할 때마다 모든 기능을 테스트하지 않고 기존 기능이 잘 작동되는 것을 보장해줍니다.)
 
 \--> 이러한 테스트 코드 작성을 도와주는 JUnit 프레임워크를 사용합니다.
-
-
-
-<table><thead><tr><th>@SpringBootApplication</th><th>SpringApplication.run</th><th data-hidden></th></tr></thead><tbody><tr><td>스프링 부트의 자동 설정, 스프링 Bean읽기와 생성을 모두 자동설정</td><td>내장 WAS를 실행->톰캣 설치할 필요 없이 Jar파일(실행가능한 java 패키징파일)로 실행하면됨</td><td></td></tr><tr><td>프로젝의 최상단</td><td></td><td></td></tr></tbody></table>
