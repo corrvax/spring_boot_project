@@ -38,3 +38,17 @@ TDD와 달리 테스트 코드를 꼭 먼저 작성해야 하는 것도 아니�
 
 
 <table><thead><tr><th>@SpringBootApplication</th><th>SpringApplication.run</th><th data-hidden></th></tr></thead><tbody><tr><td>스프링 부트의 자동 설정, 스프링 Bean읽기와 생성을 모두 자동설정</td><td>내장 WAS를 실행->톰캣 설치할 필요 없이 Jar파일(실행가능한 java 패키징파일)로 실행하면됨</td><td></td></tr><tr><td>프로젝트의 최상단에 위치해야 함</td><td>스프링부트 내장 WAS를 사용하면 언제 어디서나 같은 환경에서 스프링 부트를 배포가능함</td><td></td></tr></tbody></table>
+
+
+
+## 테스트 코드 오류
+
+Execution failed for task ':test'.
+
+> There were failing tests. See the report at: file:///Users/EunJoKim/spring\_boot\_project/build/reports/tests/test/index.html
+
+<figure><img src=".gitbook/assets/스크린샷 2022-12-10 오후 11.51.45.png" alt=""><figcaption></figcaption></figure>
+
+IntelliJ IDEA > Preferences > Build,Execution,Deployment > Gradle > Run test using : IntelliJ IDEA
+
+<figure><img src=".gitbook/assets/스크린샷 2022-12-10 오후 11.57.47.png" alt=""><figcaption></figcaption></figure>
