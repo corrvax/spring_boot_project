@@ -52,3 +52,8 @@ Execution failed for task ':test'.
 IntelliJ IDEA > Preferences > Build,Execution,Deployment > Gradle > Run test using : IntelliJ IDEA
 
 <figure><img src=".gitbook/assets/스크린샷 2022-12-10 오후 11.57.47.png" alt=""><figcaption></figcaption></figure>
+
+### @RunWith(SpringRunner.class)
+
+
+
