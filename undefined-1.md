@@ -61,8 +61,6 @@ IntelliJ IDEA > Preferences > Build,Execution,Deployment > Gradle > Run test usi
 
 즉, 스프링 부트 테스트와 JUnit 사이에 연결자 역할을 합니다.
 
-
-
 ### @WebMvcTest
 
 여러 스프링 테스트 어노테이션 중, Web(Spring MVC)에 집중할 수 있는 어노테이션입니다.
@@ -71,11 +69,34 @@ IntelliJ IDEA > Preferences > Build,Execution,Deployment > Gradle > Run test usi
 
 여기서는 컨트롤러만 사용하기 때문에 선언합니다.
 
-
-
 ### @Autowired
 
 스프링이 관리하는 빈(Bean)을 주입 받습니다.
 
+```
+private MockMvc mvc
+```
 
+웹 API를 테스트할 때 사용합니다.
 
+스프링 MVC 테스트의 시작점입니다.
+
+이 클래스를 통해 HTTP GET, POST 등에 대한 API 테스트를 할 수 있습니다.
+
+```
+mvc.perform(get("/hello"))
+```
+
+MockMvc를 통해 /hello 주소로 HTTP GET 요청을 합니다.
+
+체이닝이 지원되어 아래와 같이 여러 검증 기능을 이어서 선언할 수 있습니다.
+
+```
+.andExpect(status().isOk())
+```
+
+mvc.perform의 결과를 검증합니다.
+
+HTTP Header의 Status를 검증합니다.->200,404,500 등의 상태를 검증합니다.
+
+여기선 OK(200)인지 아닌지를 검증합니다.
