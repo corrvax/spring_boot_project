@@ -32,3 +32,13 @@ Model-View-Controller
 (5) : Service와 DAO가 작업을 수행하는데 있어서 데이터 포맷을 제공해주는 역할을 한다. DTO라고 불리고 VO, Model이라고도 불린다. 경우에 따라서 클래스 생성 시 Beans라고도 한다. 스프링은 객체단위로 움직이기 때문에 DTO를 이용해서 데이터를 주고받는다.
 
 이러한 MVC처리과정은 어노테이션(@)을 이용해서 체계적으로 관리(@Controller, @Service, @Repository 등)하게 된다. \*DAO : Data Access Object / DTO : Data Transfer Object (VO : Value Object)
+
+
+
+### Spring Framework 구조
+
+<figure><img src=".gitbook/assets/C6D74DD5-1700-49B3-B5FC-3FC71D6E14B6.jpeg" alt=""><figcaption></figcaption></figure>
+
+웹 서버 구조에서 Client당 Thread의 개념으로 접근 위 그림에서 세 명의 user가 동시에 서버에 접속할 때를 보여주고 있다. 일반적인 구조에서 각 스레드 당 객체 들이 생성된다. 스레드의 개수만큼 객체가 생성되게 되고 그 객체의 메모리가 서버의 힙 메모리 공간에 저장되게 된다.
+
+반면 스프링이 권장하고 있는 사항은 일반적인 구조처럼 각 스레드당 new를 해서 객체를 만드는 것이 아닌 beans 파일 즉 xml에 한번만 정의 해놓고 각 스레드가 해당 자원을 공유하면서 결론적으론 서버의 힙공간에는 초기 셋팅 시 딱 하나만 생성되게 된다. 스프링 프레임워크는 기본적으로 이러한 구조, SingleTone패턴을 권장한다. 각 스레드 당 객체를 관리하는 것보다 객체를 하나만 보유하고 있으면서 그걸 공유하는 방법이 더 효율 적이다. 스프링에서 이런것을 지원하기 위해 @Autowired를 지원한다.
