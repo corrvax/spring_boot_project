@@ -19,3 +19,16 @@
 
 <figure><img src=".gitbook/assets/9B92196D-DADA-426E-9EFB-06CAADE2251A.jpeg" alt=""><figcaption></figcaption></figure>
 
+Model-View-Controller
+
+(1) : VIew와 Controller와의 관계이다. 뷰는 사용자가 실제 보여지는 화면을 의미한다. 즉 화면에서 어떤 특정 서비스를 제공받기 위해 버튼을 클릭 시 이를 컨트롤러가 이벤트를 인식하게 된다. 컨트롤러는 이후 과정에서 발생되는 데이터에 따라 적절하게 다시 사용자에게 결과화면을 제공한다. 만약 에러나 다른 서비스를 보여 줄 시 뷰를 다르게 할 수 있다. View 영역은 html, jsp등으로 구성한다.
+
+(2) : Controller와 Service의 관계이다. Service는 실제 비즈니스 로직이 들어가는 부분이다. 컨트롤러는 뷰단에서 사용자에 이벤트를 적절한 서비스에게 전달한다. 이를 받은 서비스는 비즈니스 로직을 처리하게 된다.
+
+(3) : Service와 DAO의 관계이다. 실제 데이터베이스 작업을 통해 데이터를 로드하는 과정이다. 비즈니스 로직에서 필요한 데이터를 실제 Connection을 담당하고 있는 DAO를 이용해서 가져온다.
+
+(4) : DAO와 DB와의 관계이다. JDBC로직을 이용해서 DB(원격 포함)에서 CRUD를 통해 데이터를 입력, 로드한다.
+
+(5) : Service와 DAO가 작업을 수행하는데 있어서 데이터 포맷을 제공해주는 역할을 한다. DTO라고 불리고 VO, Model이라고도 불린다. 경우에 따라서 클래스 생성 시 Beans라고도 한다. 스프링은 객체단위로 움직이기 때문에 DTO를 이용해서 데이터를 주고받는다.
+
+이러한 MVC처리과정은 어노테이션(@)을 이용해서 체계적으로 관리(@Controller, @Service, @Repository 등)하게 된다. \*DAO : Data Access Object / DTO : Data Transfer Object (VO : Value Object)
