@@ -47,3 +47,15 @@ Model-View-Controller
 
 [https://rokroks.tistory.com/50](https://rokroks.tistory.com/50) JPA 동작원리
 
+
+
+<figure><img src=".gitbook/assets/7E3DD457-C78D-494F-A0E6-C1A0C0F53428.jpeg" alt=""><figcaption></figcaption></figure>
+
+스프링의 웹 기술은 MVC 아키텍처를 근간으로 하고 있다. MVC는 프레젠테이션 계층의 구성요소를 정보를 담은 모델(M), 화면 출력 로직을 담은 뷰(V), 그리고 제어 로직을 담은 컨트롤러(C)로 분리하고 이 세 가지 요소가 서로 협력해서 하나의 웹 요청을 처리하고 응답을 만들어내는 구조다.
+
+MVC 아키텍처는 보통 프론트 컨트롤러패턴과 함께 사용된다. 프론트 컨트롤러 패턴은 프레젠테이션 계층 제일앞에서 서버로 들어오는 모든 요청을 먼저 받아서 처리하게 만든다.
+
+스프링이 제공하는 스프링 서블릿/MVC의 핵심은 DispatcherServlet이라는 프론트 컨트롤러다.
+
+1. DispatcherServlet의 HTTP요청 접수 자바 서버의 서블릿 컨테이너는 HTTP 요청정보를 DispatcherServlet에 전달해준다. web.xml에는 보통 DispatcherServlet이 전달받을 URL의 패턴이 정의되어 있다. DispatcherServlet은 모든 요청에 대해 공통적으로 진행해야 하는 전처리 작업이 등록된 것을 먼저 수행한다. 공통적으로 이용 가능한 보안이나 파라미터 조작, 한글 디코딩 같은 작업을 적용된다.
+2. DispatcherServlet에서 컨트롤러로 HTTP요청 위임 DispatcherServlet은 URL이나 파라미터 정보, HTTP 명령 등을 참고로 해서 어떤 컨트롤러에게 작업을위임할지 결정한다.
